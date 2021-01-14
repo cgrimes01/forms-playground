@@ -7,15 +7,14 @@ export const TextInput = ({ label, ...props }) => {
 // message if the field is invalid and it has been touched (i.e. visited)
 const [field, meta] = useField(props);
 return (
-    <>
-    <label htmlFor={props.id || props.name}>{label}</label>
-    <input className="text-input" {...field} {...props} />
-    {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-    ) : null}
-    </>
-);
-};
+    <div>
+        <label htmlFor={props.id || props.name}>{label}</label>
+        <input className="text-input" {...field} {...props} />
+        {meta.touched && meta.error ? (
+            <div className="error">{meta.error}</div>
+        ) : null}
+    </div>
+)};
 
 export const Checkbox = ({ children, ...props }) => {
 // React treats radios and checkbox inputs differently other input types, select, and textarea.
@@ -32,8 +31,7 @@ return (
         <div className="error">{meta.error}</div>
     ) : null}
     </div>
-);
-};
+)};
 
 export const Select = ({ label, ...props }) => {
 const [field, meta] = useField(props);
@@ -45,5 +43,4 @@ return (
         <div className="error">{meta.error}</div>
     ) : null}
     </div>
-);
-};
+)};

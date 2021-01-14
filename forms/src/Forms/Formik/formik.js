@@ -1,7 +1,7 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import { TextInput, Checkbox, Select } from './components/components';
- 
+
 export const FormikExample = () => {
     return (
         <Formik
@@ -63,8 +63,7 @@ export const FormikExample = () => {
                     }
                     <button type="submit">Submit</button>
                 </Form>
-            )
-            }  
+            )}  
         </Formik>
       );
 };
