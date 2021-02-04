@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import { FormikExample } from './Forms/Formik/formik';
+import { JsonFormsExample } from './Forms/JSONForms/jsonforms';
 import {
     BrowserRouter as Router,
     Switch,
@@ -17,11 +18,17 @@ function App() {
                     <li>
                         <Link to="/formik">Formik</Link>
                     </li>
+                    <li>
+                        <Link to="/jsonforms">JsonForms</Link>
+                    </li>
                 </ul>
             </nav>
             <Switch>
                 <Route path="/formik">
                     <FormikExample />
+                </Route>
+                <Route path="/jsonforms">
+                    <JsonFormsExample />
                 </Route>
             </Switch>
         </Router>
